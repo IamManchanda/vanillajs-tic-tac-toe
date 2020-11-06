@@ -62,7 +62,7 @@ const hasPlayerWon = (player) => {
     }
 
     if (spaces[4] === player && spaces[8] === player) {
-      console.log(`${player} wins on the diagonal`);
+      console.log(`${player} wins on the left diagonal`);
       return true;
     }
   }
@@ -87,6 +87,11 @@ const hasPlayerWon = (player) => {
 
     if (spaces[1] === player && spaces[7] === player) {
       console.log(`${player} wins on the middle vertical`);
+      return true;
+    }
+
+    if (spaces[2] === player && spaces[6] === player) {
+      console.log(`${player} wins on the right diagonal`);
       return true;
     }
   }
